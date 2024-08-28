@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: sunsoaked-container
-        image: vaibhavdeshwal/sunsoaked-app:75d31714cfd7454727985592ed2fd551a76167bf
+        image: vaibhavdeshwal/sunsoaked-app:dc68e4dd30adfe481a5c00bc74eb27967c666186
         ports:
         - containerPort: 5000
 ---
