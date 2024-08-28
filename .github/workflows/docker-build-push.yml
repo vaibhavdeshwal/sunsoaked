@@ -31,7 +31,7 @@ jobs:
 
     - name: Update Kubernetes manifest
       run: |
-        sed -i 's|image: .*/sunsoaked-app:.*|image: vaibhavdeshwal/sunsoaked-app:${{ github.sha }}|' path/to/your/deployment.yaml
+        sed -i 's|image: .*/sunsoaked-app:.*|image: vaibhavdeshwal/sunsoaked-app:${{ github.sha }}|' k8s/deployment.yaml
 
     - name: Commit and push changes
       run: |
