@@ -37,6 +37,8 @@ jobs:
       run: |
         git config --global user.name 'vaibhavdeshwal'
         git config --global user.email 'actions@github.com'
-        git add k8s/deployment.yaml
-        git commit -m "Update image tag to ${{ github.sha }}"
+        git checkout -b k8s || git checkout k8s 
+        git pull origin k8s
+        git add k8s/deployment.yml
+        git commit -m "Update image tag to ${{ github.sha }}" || echo "No changes to commit"
         git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:k8s
