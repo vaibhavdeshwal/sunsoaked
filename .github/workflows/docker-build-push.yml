@@ -1,7 +1,9 @@
 name: Build and Deploy
 
 on:
-    workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -37,4 +39,4 @@ jobs:
         git config --global user.email 'actions@github.com'
         git add k8s/deployment.yaml
         git commit -m "Update image tag to ${{ github.sha }}"
-        git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+        git push https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git HEAD:k8s
