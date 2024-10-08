@@ -30,6 +30,9 @@ jobs:
         tags: vaibhavdeshwal/sunsoaked-app:${{ github.sha }}
  
   update-k8s-manifest:
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
