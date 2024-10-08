@@ -30,6 +30,7 @@ jobs:
         tags: vaibhavdeshwal/sunsoaked-app:${{ github.sha }}
  
   update-k8s-manifest:
+    needs: build-and-push 
     runs-on: ubuntu-latest
 
     steps:
