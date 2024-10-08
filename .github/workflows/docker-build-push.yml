@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build & push:
+  build-n-push:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +29,7 @@ jobs:
         push: true
         tags: vaibhavdeshwal/sunsoaked-app:${{ github.sha }}
  
-  update k8s manifest:
+  update-k8s-manifest:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
