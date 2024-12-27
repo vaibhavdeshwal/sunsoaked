@@ -1,1 +1,1 @@
-# sunsoaked
+This repository demonstrates a CI pipeline using GitHub Actions to build Docker images, update the deployment.yaml file, and prepare the application for deployment. The deployment file is dynamically updated with the latest image tag to ensure smooth, automated deployments.
